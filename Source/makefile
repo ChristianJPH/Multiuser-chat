@@ -18,7 +18,7 @@ LDFLAGS +=	$(foreach library,$(program_LIBRARIES),-l$(library))
 all:	$(program_NAME)
 
 $(program_NAME): $(program_OBJS)
-	$(LINK.cc) $(program_OBJS) -o $(program_NAME)
+	$(LINK.cc) $(program_OBJS) -o $(program_NAME) -pthread
 
 clean:
 	rm -f $(program_NAME)
